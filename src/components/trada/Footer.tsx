@@ -1,4 +1,5 @@
-import { navLinks } from "./Header";
+import { navLinks } from "@/lib/navigation";
+
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -8,8 +9,8 @@ export function Footer() {
         <div className="max-w-sm">
           <Logo tone="light" />
           <p className="mt-6 leading-relaxed">
-            Trada helps Nigerian business owners record sales, manage stock, track expenses and debtors, and know
-            their profit — just speak, snap or type.
+            Trada helps Nigerian business owners record sales, manage stock, track expenses and
+            debtors, and know their profit — just speak, snap or type.
           </p>
         </div>
         <nav aria-label="Footer">
@@ -27,13 +28,15 @@ export function Footer() {
         <div>
           <p className="font-display text-lg font-semibold text-on-navy">Company & legal</p>
           <p className="mt-5 leading-relaxed">
-            Contact details, privacy policy, terms and data protection information will appear here once
-            confirmed.
+            Contact details, privacy policy, terms and data protection information will appear here
+            once confirmed.
           </p>
         </div>
       </div>
       <div className="border-t border-on-navy/10">
-        <p className="container-page py-6 text-sm">© {new Date().getFullYear()} Trada. All rights reserved.</p>
+        <p className="container-page py-6 text-sm">
+          © {new Date().getFullYear()} Trada. All rights reserved.
+        </p>
       </div>
     </footer>
   );

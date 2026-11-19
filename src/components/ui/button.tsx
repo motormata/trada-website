@@ -20,8 +20,7 @@ const buttonVariants = cva(
         navy: "rounded-full bg-primary text-primary-foreground hover:bg-navy-soft",
         quiet:
           "rounded-full border border-border bg-surface text-foreground hover:border-secondary hover:text-accent-foreground",
-        onNavy:
-          "rounded-full border border-on-navy/25 text-on-navy hover:bg-on-navy/10",
+        onNavy: "rounded-full border border-on-navy/25 text-on-navy hover:bg-on-navy/10",
       },
       size: {
         default: "h-9 px-4 py-2",
@@ -54,4 +53,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button };

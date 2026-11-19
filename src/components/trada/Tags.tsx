@@ -1,7 +1,13 @@
 import { Clock, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export function PendingTag({ children = "Pending confirmation", className }: { children?: React.ReactNode; className?: string }) {
+export function PendingTag({
+  children = "Pending confirmation",
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
   return (
     <span
       className={cn(
@@ -15,7 +21,13 @@ export function PendingTag({ children = "Pending confirmation", className }: { c
   );
 }
 
-export function SampleTag({ className, tone = "light" }: { className?: string; tone?: "light" | "dark" }) {
+export function SampleTag({
+  className,
+  tone = "light",
+}: {
+  className?: string;
+  tone?: "light" | "dark";
+}) {
   return (
     <span
       className={cn(

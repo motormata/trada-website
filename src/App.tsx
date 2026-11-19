@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Categories } from "@/components/trada/Categories";
 import { Challenges } from "@/components/trada/Challenges";
 import { Demos } from "@/components/trada/Demos";
@@ -11,29 +10,7 @@ import { HowItWorks } from "@/components/trada/HowItWorks";
 import { Pricing } from "@/components/trada/Pricing";
 import { Value } from "@/components/trada/Value";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Trada — Run Your Business Smarter | Sales, Stock & Profit" },
-      {
-        name: "description",
-        content:
-          "Trada helps Nigerian business owners record sales, manage stock and know their profit. Just speak, snap or type.",
-      },
-      { property: "og:title", content: "Trada — Run Your Business Smarter" },
-      {
-        property: "og:description",
-        content:
-          "Record sales, manage stock and know your profit effortlessly. Just speak, snap or type.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Index,
-});
-
-function Index() {
+export function App() {
   return (
     <>
       <a

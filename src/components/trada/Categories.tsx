@@ -37,7 +37,12 @@ export function Categories() {
         />
         <ul className="mt-16 grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:mt-20 lg:grid-cols-5 lg:gap-x-10 lg:gap-y-16">
           {categories.map((c, i) => (
-            <Reveal as="li" key={c.label} delay={(i % 5) * 70} className="border-t border-border pt-7">
+            <Reveal
+              as="li"
+              key={c.label}
+              delay={(i % 5) * 70}
+              className="border-t border-border pt-7"
+            >
               <c.icon className="size-9 text-secondary" strokeWidth={1.4} aria-hidden />
               <p className="mt-5 text-lg font-medium leading-snug text-foreground">{c.label}</p>
             </Reveal>

@@ -15,7 +15,12 @@ import { siteConfig } from "@/lib/site-config";
  * Main call to action. Goes to the live sign-up page when one is configured;
  * until then it explains honestly that sign-up isn't open yet.
  */
-export function CtaButton({ size = "xl", variant = "cta", className, label }: ButtonProps & { label?: string }) {
+export function CtaButton({
+  size = "xl",
+  variant = "cta",
+  className,
+  label,
+}: ButtonProps & { label?: string }) {
   const [open, setOpen] = useState(false);
   const text = label ?? siteConfig.primaryCtaLabel;
 
@@ -41,8 +46,8 @@ export function CtaButton({ size = "xl", variant = "cta", className, label }: Bu
           <DialogHeader>
             <DialogTitle className="font-display text-2xl">Sign-up is almost ready</DialogTitle>
             <DialogDescription className="text-base leading-relaxed">
-              We're finalising how you'll join Trada, including trial details. This button will take you
-              straight to sign-up as soon as it's live.
+              We're finalising how you'll join Trada, including trial details. This button will take
+              you straight to sign-up as soon as it's live.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>

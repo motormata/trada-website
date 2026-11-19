@@ -31,11 +31,18 @@ function Field({
         flagged ? "border-pending-foreground/40 bg-pending" : "border-border bg-surface",
       )}
     >
-      <p className={cn("text-[0.62rem]", flagged ? "text-pending-foreground" : "text-muted-foreground")}>
+      <p
+        className={cn(
+          "text-[0.62rem]",
+          flagged ? "text-pending-foreground" : "text-muted-foreground",
+        )}
+      >
         {label}
       </p>
       <div className="flex items-center justify-between gap-2">
-        <p className={cn("text-[0.78rem] font-semibold", flagged && "text-pending-foreground")}>{value}</p>
+        <p className={cn("text-[0.78rem] font-semibold", flagged && "text-pending-foreground")}>
+          {value}
+        </p>
         {flagged ? (
           <AlertTriangle className="size-3.5 shrink-0 text-pending-foreground" aria-hidden />
         ) : (
@@ -43,7 +50,12 @@ function Field({
         )}
       </div>
       {note && (
-        <p className={cn("mt-0.5 text-[0.6rem]", flagged ? "text-pending-foreground" : "text-muted-foreground")}>
+        <p
+          className={cn(
+            "mt-0.5 text-[0.6rem]",
+            flagged ? "text-pending-foreground" : "text-muted-foreground",
+          )}
+        >
           {note}
         </p>
       )}
@@ -182,7 +194,10 @@ export function SnapScreen({ step }: { step: number }) {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover object-[75%_50%] opacity-90"
         />
-        <div className="absolute inset-5 rounded-2xl border-2 border-teal-bright/80" aria-hidden="true">
+        <div
+          className="absolute inset-5 rounded-2xl border-2 border-teal-bright/80"
+          aria-hidden="true"
+        >
           <span className="scan-line absolute inset-x-2 h-0.5 rounded-full bg-teal-bright shadow-cta" />
         </div>
         <div className="absolute inset-x-0 bottom-5 flex flex-col items-center gap-2">
@@ -201,7 +216,14 @@ export function SnapScreen({ step }: { step: number }) {
       <div className="flex h-full flex-col pb-5">
         <ScreenHeader title="Review what Trada read" />
         <div className="mx-4 flex items-center gap-3 rounded-xl bg-muted p-2">
-          <img src={notebookImg} alt="" width={1024} height={1280} loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
+          <img
+            src={notebookImg}
+            alt=""
+            width={1024}
+            height={1280}
+            loading="lazy"
+            className="h-10 w-10 rounded-lg object-cover"
+          />
           <p className="text-[0.65rem] leading-snug text-muted-foreground">
             Notebook page · 15/04
             <br />5 sales found
@@ -219,7 +241,9 @@ export function SnapScreen({ step }: { step: number }) {
               <div className="flex items-center justify-between gap-2">
                 <span className="font-semibold">{r.item}</span>
                 <span className="flex items-center gap-3">
-                  <span className={cn(r.flagged && "font-semibold text-pending-foreground")}>× {r.qty}</span>
+                  <span className={cn(r.flagged && "font-semibold text-pending-foreground")}>
+                    × {r.qty}
+                  </span>
                   <span className="font-semibold">{r.amount}</span>
                 </span>
               </div>
@@ -310,7 +334,9 @@ export function InventoryScreen({ step }: { step: number }) {
         <p className="text-[0.65rem] text-on-navy-muted">In stock</p>
         <p className="font-display text-3xl font-semibold">{added ? "29" : "9"} bags</p>
         {added && (
-          <p className="mt-1 text-[0.65rem] font-semibold text-teal-bright">+20 bags received today</p>
+          <p className="mt-1 text-[0.65rem] font-semibold text-teal-bright">
+            +20 bags received today
+          </p>
         )}
       </div>
       <div className="mx-4 mt-3 grid grid-cols-2 gap-2">
@@ -354,7 +380,10 @@ export function CommandScreen({ step }: { step: number }) {
             <div key={b.n} className="flex items-center gap-2 text-[0.6rem]">
               <span className="w-20 shrink-0 text-on-navy-muted">{b.n}</span>
               <span className="h-1.5 flex-1 rounded-full bg-on-navy/10">
-                <span className="fill-bar block h-full rounded-full bg-teal-bright" style={{ width: `${b.w}%` }} />
+                <span
+                  className="fill-bar block h-full rounded-full bg-teal-bright"
+                  style={{ width: `${b.w}%` }}
+                />
               </span>
             </div>
           ))}

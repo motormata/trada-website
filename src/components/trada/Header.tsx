@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site-config";
+import { navLinks } from "@/lib/navigation";
 import { CtaButton } from "./CtaButton";
 import { Logo } from "./Logo";
-
-export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#features", label: "Features" },
-  { href: "#businesses", label: "Businesses" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faqs", label: "FAQs" },
-];
 
 export function Header() {
   const [open, setOpen] = useState(false);

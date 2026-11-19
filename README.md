@@ -1,26 +1,33 @@
-# Trada Screenshot To Showcase
+# Trada Website
 
-Implement exactly the screenshot and nothing else
+The public landing page for Trada, a business management product for Nigerian SMEs. This is a
+single-page React application built with Vite, TypeScript, and Tailwind CSS.
 
-This project was built with [Lovable](https://lovable.dev).
+## Local development
 
-**Live app**: https://trada-screenshot-to-showcase.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b0c4f7f1-0779-4ec4-8b4d-70553487b80e).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Use a current Node.js LTS release and npm.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+The development server prints its local URL when it starts.
+
+## Quality checks
+
+```sh
+npm run lint
+npm run test
+npm run build
+```
+
+`npm run preview` serves the production build from `dist` for a final local check.
+
+## Deployment
+
+Netlify configuration is included in `netlify.toml`. Netlify runs `npm run build` and publishes
+the `dist` directory.
+
+The production hostname is not known yet, so canonical and sitemap URLs are intentionally omitted.
+Add them once the final domain has been connected.

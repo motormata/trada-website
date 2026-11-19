@@ -39,7 +39,9 @@ export function HowItWorks() {
               className="flex flex-col rounded-[1.75rem] bg-surface p-8 shadow-soft sm:p-10"
             >
               <div className="flex items-center justify-between">
-                <span className="font-display text-6xl font-semibold text-accent-foreground/25">{i + 1}</span>
+                <span className="font-display text-6xl font-semibold text-accent-foreground/25">
+                  {i + 1}
+                </span>
                 <span className="grid size-12 place-items-center rounded-2xl bg-accent text-accent-foreground">
                   <s.icon className="size-5" aria-hidden />
                 </span>

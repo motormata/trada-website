@@ -21,7 +21,9 @@ export function Pricing() {
           <Reveal className="flex flex-col rounded-[1.75rem] border-2 border-secondary bg-surface p-8 shadow-soft sm:p-10">
             <p className="eyebrow text-accent-foreground">Monthly</p>
             <p className="mt-6 flex items-baseline gap-2">
-              <span className="font-display text-5xl font-semibold sm:text-6xl">{formatNaira(pricing.monthly)}</span>
+              <span className="font-display text-5xl font-semibold sm:text-6xl">
+                {formatNaira(pricing.monthly)}
+              </span>
             </p>
             <p className="mt-2 text-muted-foreground">per business, per month</p>
             <div className="mt-auto pt-10">
@@ -29,12 +31,17 @@ export function Pricing() {
             </div>
           </Reveal>
 
-          <Reveal delay={120} className="flex flex-col rounded-[1.75rem] border border-border bg-background p-8 sm:p-10">
+          <Reveal
+            delay={120}
+            className="flex flex-col rounded-[1.75rem] border border-border bg-background p-8 sm:p-10"
+          >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <p className="eyebrow text-accent-foreground">Yearly</p>
               {!pricing.annualConfirmed && <PendingTag />}
             </div>
-            <p className="mt-6 font-display text-5xl font-semibold sm:text-6xl">{formatNaira(pricing.annual)}</p>
+            <p className="mt-6 font-display text-5xl font-semibold sm:text-6xl">
+              {formatNaira(pricing.annual)}
+            </p>
             <p className="mt-2 text-muted-foreground">per business, per year</p>
             <p className="mt-6 rounded-xl bg-accent px-4 py-3 text-[0.95rem] text-accent-foreground">
               {formatNaira(savings.saved)} less than 12 monthly payments
@@ -48,8 +55,8 @@ export function Pricing() {
 
         <Reveal delay={200} className="mx-auto mt-12 max-w-2xl text-center">
           <p className="leading-relaxed text-muted-foreground">
-            Trial length, payment details and exactly what each plan includes are being finalised and will be
-            shown here once confirmed.
+            Trial length, payment details and exactly what each plan includes are being finalised
+            and will be shown here once confirmed.
           </p>
         </Reveal>
       </div>
