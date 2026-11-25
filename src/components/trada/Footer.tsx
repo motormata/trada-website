@@ -9,8 +9,8 @@ export function Footer() {
         <div className="max-w-sm">
           <Logo tone="light" />
           <p className="mt-6 leading-relaxed">
-            Trada helps Nigerian business owners record sales, manage stock, track expenses and
-            debtors, and know their profit — just speak, snap or type.
+            Trada helps Nigerian business owners record sales, manage inventory, understand customer
+            balances and see what needs attention — just speak, use a product image or type.
           </p>
         </div>
         <nav aria-label="Footer">
@@ -26,7 +26,7 @@ export function Footer() {
           </ul>
         </nav>
         <div>
-          <p className="font-display text-lg font-semibold text-on-navy">Company & legal</p>
+          <p className="font-display text-lg font-semibold text-on-navy">Company &amp; legal</p>
           <p className="mt-5 leading-relaxed">
             Contact details, privacy policy, terms and data protection information will appear here
             once confirmed.

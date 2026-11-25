@@ -18,8 +18,8 @@ describe("Trada pricing", () => {
     expect(pricing.annualConfirmed).toBe(false);
   });
 
-  it("does not claim a free trial before the trial flow is confirmed", () => {
-    expect(siteConfig.signupUrl).toBeNull();
+  it("links the primary call to action to the live registration page", () => {
+    expect(siteConfig.signupUrl).toBe("https://app.trada.com.ng/register");
     expect(siteConfig.primaryCtaLabel).not.toMatch(/trial/i);
   });
 });

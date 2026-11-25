@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
 import { App } from "@/App";
@@ -13,12 +12,12 @@ describe("Trada landing page", () => {
     expect(screen.getByRole("heading", { name: /questions, answered/i })).toBeInTheDocument();
   });
 
-  it("explains that sign-up is pending", async () => {
-    const user = userEvent.setup();
+  it("links Get Started to the live registration page", () => {
     render(<App />);
 
-    await user.click(screen.getAllByRole("button", { name: "Get Started" })[0]);
-
-    expect(screen.getByRole("dialog")).toHaveTextContent("Sign-up is almost ready");
+    expect(screen.getAllByRole("link", { name: "Get Started" })[0]).toHaveAttribute(
+      "href",
+      "https://app.trada.com.ng/register",
+    );
   });
 });

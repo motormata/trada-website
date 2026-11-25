@@ -1,14 +1,12 @@
 import { ChartNoAxesColumn, PackagePlus, UserPlus } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
-import { PendingTag } from "./Tags";
 
 const steps = [
   {
     icon: UserPlus,
     title: "Create an account",
     body: "Sign up from your phone and tell Trada what kind of business you run.",
-    note: "Proposed: phone number with a one-time code, then your business type and role.",
   },
   {
     icon: PackagePlus,
@@ -48,12 +46,6 @@ export function HowItWorks() {
               </div>
               <h3 className="mt-10 text-2xl font-semibold sm:text-3xl">{s.title}</h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">{s.body}</p>
-              {s.note && (
-                <div className="mt-6 space-y-2 border-t border-border pt-5">
-                  <PendingTag>Sign-up flow pending</PendingTag>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{s.note}</p>
-                </div>
-              )}
             </Reveal>
           ))}
         </ol>

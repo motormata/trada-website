@@ -143,7 +143,8 @@ export function Hero() {
         <Reveal delay={180} className="mx-auto mt-10 max-w-3xl">
           <p className="eyebrow text-accent-foreground">For Nigerian business owners</p>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Record sales, manage stock and see your profit—just by speaking, snapping or typing.
+            Record sales, manage inventory and see what needs attention — just by speaking, snapping
+            or typing.
           </p>
           <ul className="mt-7 flex flex-wrap justify-center gap-x-7 gap-y-3 text-[0.95rem] text-muted-foreground">
             {[

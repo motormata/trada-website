@@ -9,17 +9,17 @@ const values = [
   {
     icon: Eye,
     title: "Clarity",
-    body: "See sales, spending and stock together, without searching through separate records.",
+    body: "See sales, stock and customer balances together, without searching through separate records.",
   },
   {
     icon: ShieldCheck,
     title: "Control",
-    body: "Keep stock and records accurate while reducing the small mistakes that cost money.",
+    body: "Keep sales, stock and customer records organised in one simple workspace.",
   },
   {
     icon: Lightbulb,
     title: "Growth",
-    body: "Know what to restock, what to promote and where your business can save.",
+    body: "Know what to restock and review the information that helps you make your next decision.",
   },
 ];
 

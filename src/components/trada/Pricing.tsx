@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import { annualSavings, formatNaira, pricing } from "@/lib/site-config";
 import { CtaButton } from "./CtaButton";
 import { Reveal } from "./Reveal";
@@ -6,6 +7,15 @@ import { PendingTag } from "./Tags";
 
 export function Pricing() {
   const savings = annualSavings(pricing.monthly, pricing.annual);
+  const includedFeatures = [
+    "Sales and payment-status tracking",
+    "Product catalogue and inventory monitoring",
+    "Low-stock alerts",
+    "Customer records and purchase history",
+    "Owner dashboard with sales and inventory context",
+    "Voice, text and product-image assisted entry — review before saving",
+    "Use on phone, tablet or desktop",
+  ];
 
   return (
     <section id="pricing" aria-labelledby="pricing-title" className="band bg-surface">
@@ -26,6 +36,7 @@ export function Pricing() {
               </span>
             </p>
             <p className="mt-2 text-muted-foreground">per business, per month</p>
+            <FeatureList features={includedFeatures} />
             <div className="mt-auto pt-10">
               <CtaButton className="w-full" />
             </div>
@@ -43,6 +54,7 @@ export function Pricing() {
               {formatNaira(pricing.annual)}
             </p>
             <p className="mt-2 text-muted-foreground">per business, per year</p>
+            <FeatureList features={includedFeatures} />
             <p className="mt-6 rounded-xl bg-accent px-4 py-3 text-[0.95rem] text-accent-foreground">
               {formatNaira(savings.saved)} less than 12 monthly payments
               {pricing.annualConfirmed && <> — save {savings.percent}%</>}
@@ -61,5 +73,18 @@ export function Pricing() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+function FeatureList({ features }: { features: string[] }) {
+  return (
+    <ul className="mt-8 space-y-3 border-t border-border pt-7 text-sm leading-relaxed text-muted-foreground">
+      {features.map((feature) => (
+        <li key={feature} className="flex gap-3">
+          <Check className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden />
+          <span>{feature}</span>
+        </li>
+      ))}
+    </ul>
   );
 }

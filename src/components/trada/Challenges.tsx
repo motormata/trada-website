@@ -1,4 +1,4 @@
-import { Boxes, CircleHelp, HandCoins, Receipt } from "lucide-react";
+import { Boxes, CircleHelp, HandCoins, ReceiptText } from "lucide-react";
 import stressIllustration from "@/assets/business-stress-illustration-v2.webp";
 import { useMobileScrollStory } from "@/hooks/use-mobile-scroll-story";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
@@ -12,9 +12,9 @@ const problems = [
     body: "Records live in notebooks, chats and memory, so the shelf count is never certain.",
   },
   {
-    icon: Receipt,
-    title: "Expenses are unclear",
-    body: "Small costs disappear through the week, making your month-end numbers unclear.",
+    icon: ReceiptText,
+    title: "Sales records are scattered",
+    body: "Sales live in notebooks, chats and memory, making it hard to see what happened each day.",
   },
   {
     icon: HandCoins,
@@ -23,8 +23,8 @@ const problems = [
   },
   {
     icon: CircleHelp,
-    title: "Are you making a profit?",
-    body: "Money moves every day, but it is hard to know what the business actually made.",
+    title: "What needs attention?",
+    body: "Without one clear view, low stock, recent sales and customer balances are easy to miss.",
   },
 ];
 

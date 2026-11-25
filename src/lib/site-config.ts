@@ -4,8 +4,8 @@
  * page renders it as "pending" instead of guessing.
  */
 export const siteConfig = {
-  /** Live sign-up destination. null = not confirmed yet. */
-  signupUrl: null as string | null,
+  /** Live sign-up destination. */
+  signupUrl: "https://app.trada.com.ng/register",
   /** Label for the main action. Only switch to "Start Free Trial" once the trial flow is confirmed. */
   primaryCtaLabel: "Get Started",
   /** Real demo video/link. null hides the "Watch demo" action. */
